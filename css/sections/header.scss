@@ -1,0 +1,194 @@
+.page-head {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 999;
+	width: 100%;
+	background: $white;
+	box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.05);
+}
+.page-head_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.box-head {
+	position: relative;
+	display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  // transition: all 1s ease;
+}
+// .page-head_fixed .box-head {
+//   height: 100px;
+// }
+.page-logo, .page-nav__list {
+	display: flex;
+  align-items: center;
+}
+.page-nav__item {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 0;
+	margin-left: 60px;
+}
+.page-nav__item:first-child {
+	margin-left: 0;
+}
+.page-nav__link {
+	display: block;
+	font-size: 16px;
+	color: $light-gray;
+}
+
+// head-sleder
+.head-slider__item_mob {
+	display: none;
+}
+.head-slider {
+	margin-top: 101px;
+	position: relative;
+}
+.slider-arrows {
+	position: absolute;
+  z-index: 999;
+  top: 50%;
+  transform: translateY(-50%);
+	background: $darken-gray;
+	fill: $white;
+	border-radius: 50%;
+	cursor: pointer;
+	outline: none;
+	transition: 0.3s ease-out 0.1s;
+	width: 55px;
+  height: 55px;
+}
+.slider-arrows.svg-inline--fa.fa-w-6 {
+  width: 50px;
+  height: 50px;
+}
+.svg-inline--fa.fa-w-6:hover {
+	background: $arrow-bg-color;
+	border: 5px solid $white;
+}
+
+.svg-inline--fa.fa-w-6:hover {
+  padding: 7px;
+}
+.arrow-left {
+	transform: translateY(-50%) rotateY(180deg);
+	left: 10px;
+}
+.arrow-right {
+	right: 10px;
+}
+.svg-inline--fa.fa-w-6 {
+  padding: 13px;
+}
+.head-slider__item {
+	position: relative;
+}
+.slider-content {
+	position: absolute;
+	width: 47%;
+	top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+}
+.slider-content {
+	color: $darken-gray;
+	font-family: "latolight", sans-serif, Arial;
+}
+.slider-content__title {
+	font-size: 3.3rem;
+}
+.slider-content p {
+	font-size: 1.4rem;
+	margin: 30px 0;
+}
+
+#nav-icon {
+    width: 23px;
+    height: 18px;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    display: none;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+#nav-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: $color-burger;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+}
+#nav-icon span:nth-child(1) {
+    top: 0px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+}
+#nav-icon span:nth-child(2) {
+    top: 7px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+}
+#nav-icon span:nth-child(3) {
+    top: 14px;
+    -webkit-transform-origin: left center;
+    -moz-transform-origin: left center;
+    -o-transform-origin: left center;
+    -ms-transform-origin: left center;
+    transform-origin: left center;
+}
+
+#nav-icon.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 0px;
+  left: 0;
+}
+
+#nav-icon.open span:nth-child(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+#nav-icon.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 17px;
+  left: 0;
+}

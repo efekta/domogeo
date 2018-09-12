@@ -1,0 +1,373 @@
+* {
+	box-sizing: border-box;
+}
+html {
+	font-size: 18px;
+}
+html, body {
+  height: 100%;
+}
+body {
+	width: 100%;
+	height: 100%;
+	display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  line-height: 1.42;
+  color: $font-color;
+  font-family: "latoregular";
+}
+ul {
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0;
+	font-weight: normal;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table; 
+}
+
+.clearfix:after {
+  clear: both;
+}
+.wrapper { // для прижатия footer
+	flex: 1 0 auto;
+	position: relative;
+}
+.container {
+	max-width: 1170px;
+	width: auto;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+.footer {
+  flex-shrink: 0;
+}
+img {
+	width: 100%;
+}
+a {
+	transition: 0.3s ease-out 0.1s;
+}
+a:hover {
+	color: $green-color-hover;
+}
+button {
+	min-width: 170px;
+	background: $green-color-hover;
+	padding: 18px 34px;
+	font-size: 0.7rem;
+	color: $white;
+	font-family: "latoblack", sans-serif, Arial;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	border: none;
+	border-radius: 3px;
+}
+p {
+	margin: 0;
+}
+li.active a {
+	color: $green-color-hover;
+}
+h2 {
+	color: $font-color;
+	font-size: 2rem;
+}
+section {
+	margin-bottom: 70px;
+}
+.title {
+	text-align: center;
+	margin-bottom: 30px;
+	font-family: "latolight";
+}
+input {
+	font-family: "latoregular";
+	font-size: 1rem;
+	color: $font-color;
+	outline: none;
+}
+
+ input::-moz-placeholder {
+    color: $light-gray;
+    font-size: 0.8rem;
+    font-family: "latoregular";
+   }
+ input::-webkit-input-placeholder {
+  	color: $light-gray;
+  	font-size: 0.8rem;
+  	font-family: "latoregular";
+   }
+ input:-ms-input-placeholder {
+  	color: $light-gray;
+  	font-size: 0.8rem;
+  	font-family: "latoregular";
+   }
+ input::-ms-input-placeholder {
+  	color: $light-gray;
+  	font-size: 0.8rem;
+  	font-family: "latoregular";
+   }
+ input::placeholder {
+  	color: $light-gray;
+  	font-size: 0.8rem;
+  	font-family: "latoregular";
+   } 
+label.error {
+	position: absolute;
+	// top: 0;
+	// left: 0;
+  // border: red;
+  // color: red;
+  // font-size: 16px;
+  display: block;
+  // font-family: 'latoregular';
+  // text-align: left;
+  // padding: 5px 0;
+  font-size: 0;
+  width: 100%;
+
+
+  border: 1px solid red;
+  top: 0;
+  padding: 25px;
+}
+#option-error {
+	font-size: 12px;
+// 	border: none;
+// 	display: none !important;
+}
+// Firefox Overrides
+::-moz-range-track {
+    background: $range-track-color;
+    border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer { 
+  border: 0; 
+}
+
+
+
+
+.button.raised {
+  -moz-transition: all 0.1s;
+  -o-transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  background: #0c84e4;
+  box-shadow: 0px 1px 1px #085a9b;
+}
+.button.raised:active {
+  background: #0c7dd8;
+  box-shadow: 0px 1px 1px #063e6b;
+}
+
+
+
+
+.anim {
+  -moz-transform: translateY(-50%) translateX(-50%);
+  -ms-transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  transform: translateY(-50%) translateX(-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+}
+.anim:before {
+  position: relative;
+  content: '';
+  display: block;
+  margin-top: 100%;
+}
+.anim:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+}
+
+.clickable .toggle:checked + .anim {
+  -moz-animation: anim-in 0.75s;
+  -webkit-animation: anim-in 0.75s;
+  animation: anim-in 0.75s;
+}
+.clickable .toggle:checked + .anim:after {
+  -moz-animation: anim-in-pseudo 0.75s;
+  -webkit-animation: anim-in-pseudo 0.75s;
+  animation: anim-in-pseudo 0.75s;
+}
+.clickable .toggle:not(:checked) + .anim {
+  -moz-animation: anim-out 0.75s;
+  -webkit-animation: anim-out 0.75s;
+  animation: anim-out 0.75s;
+}
+.clickable .toggle:not(:checked) + .anim:after {
+  -moz-animation: anim-out-pseudo 0.75s;
+  -webkit-animation: anim-out-pseudo 0.75s;
+  animation: anim-out-pseudo 0.75s;
+}
+
+.hoverable:hover > .anim {
+  -moz-animation: anim-out 0.75s;
+  -webkit-animation: anim-out 0.75s;
+  animation: anim-out 0.75s;
+}
+.hoverable:hover > .anim:after {
+  -moz-animation: anim-out-pseudo 0.75s;
+  -webkit-animation: anim-out-pseudo 0.75s;
+  animation: anim-out-pseudo 0.75s;
+}
+
+
+
+
+@-webkit-keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-ms-keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes anim-in {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@-moz-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@-ms-keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes anim-in-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@-webkit-keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-moz-keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-ms-keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes anim-out {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@-moz-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@-ms-keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}
+@keyframes anim-out-pseudo {
+  0% {
+    background: rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    background: transparent;
+  }
+}

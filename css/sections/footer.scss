@@ -1,0 +1,111 @@
+.footer {
+	background: $light-gray-footer;
+}
+.footer-adress {
+	padding: 55px 0 37px;
+	border-bottom: 1px solid $footer-border-bottom;
+	margin-bottom: 5px;
+}
+.footer-sub {
+	padding: 30px 0;
+	border-top: 1px solid $footer-border-bottom;
+}
+.box-logo-footer {
+	margin-bottom: 38px;
+}
+.box-logo-footer img {
+	width: auto;
+}
+.inner {
+	// width: 33%;
+	margin-right: 30px;
+	flex-grow: 1;
+}
+.inner-1 {
+	width: 330px;
+}
+.inner-2 {
+	width: 200px;
+}
+.inner-3 {
+	width: 222px;
+}
+.inner:nth-last-child {
+	margin-right: 0;
+}
+.footer-inner-box {
+	display: flex;
+	justify-content: space-between;
+	color: $foot-font-gray;
+}
+.footer-inner-box__title {
+	font-size: 0.8rem;
+	font-family: "latobold";
+	margin-bottom: 8px;
+}
+.footer-inner-box__desc {
+	font-family: "latoregular";
+	font-size: 0.7rem;
+	color: $foot-font-gray;
+}
+.footer-inner-box__desc a {
+	font-family: "latoregular";
+	font-size: 0.7rem;
+	color: $foot-font-gray;
+}
+.footer-sub-inner {
+	width: 70%;
+	margin-right: 0;
+}
+.footer-sub-social-box__list {
+	display: flex;
+}
+.footer-sub-social-box__item {
+	margin-left: 20px;
+}
+.footer-sub-social-box__item:first-child {
+	margin-left: 0;
+}
+svg.social-ico {
+	color: $light-gray-footer;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	padding: 5px;
+	background: $foot-font-gray;
+	-webkit-transition: all .8s ease;
+  -moz-transition: all .8s ease;
+  -o-transition: all .8s ease;
+  -ms-transition: all .8s ease;
+  transition: all .8s ease;
+}
+svg.social-ico-vk {
+	fill: $foot-font-gray;
+	background: $light-gray-footer;
+  padding: 0;
+}
+svg.social-ico-vk:hover {
+	fill: $white;
+	background: #4A76A8;
+	border: 2px solid #4A76A8;
+}
+svg.social-ico-fb {
+	fill: $foot-font-gray;
+	background: $light-gray-footer;
+  padding: 0;
+}
+svg.social-ico-fb:hover {
+	fill: $white;
+	background: #3C5A99;
+	border: 2px solid #3C5A99;
+}
+svg.social-ico-insta {
+	fill: $foot-font-gray;
+	background: $light-gray-footer;
+  padding: 0;
+}
+svg.social-ico-insta:hover  {
+	fill: $white;
+	background: #DF3C63;
+	border: 2px solid #DF3C63;
+}

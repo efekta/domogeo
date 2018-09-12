@@ -1,0 +1,44 @@
+// variables
+$white: #fff;
+$font-color: #2c3e50;
+$light-gray: #a1b1bc;
+$light-gray-footer: #f4f4f4;
+$footer-border-bottom: rgb(234, 235, 235);
+$darken-gray: #34495e;
+$foot-font-gray: #8c8c8c;
+$gray: #59646a;
+$green-color-hover: #1abc9c;
+$arrow-bg-color: rgba(44, 62, 80, 0.69);
+$color-burger: rgb(44, 62, 80);
+$blue: #15527d;
+
+// Base Colors
+$shade-10: #2c3e50 !default;
+$shade-1: #d7dcdf !default;
+$shade-0: #fff !default;
+// $teal: #1abc9c !default;
+
+// $range-width: 100% !default;
+
+$range-handle-color: $shade-10 !default;
+// $range-handle-color-hover: $teal !default;
+$range-handle-size: 12px !default;
+
+$range-track-color: $shade-1 !default;
+$range-track-height: 3px !default;
+
+$range-label-color: $shade-10 !default;
+$range-label-width: 60px !default;
+
+// laout
+@import "settings/font.scss";
+@import "settings/normalize.scss";
+@import "settings/setting.scss";
+@import "../libs/slick/slick.scss";
+@import "../libs/slick/slick-theme.scss";
+@import "../libs/jQueryFormStyler/jquery.formstyler.scss";
+@import "../libs/jQueryFormStyler/jquery.formstyler.theme.scss";
+@import "sections/header.scss";
+@import "sections/content.scss";
+@import "sections/footer.scss";
+@import "sections/adaptive.scss";
