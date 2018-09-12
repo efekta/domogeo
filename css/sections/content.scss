@@ -583,6 +583,9 @@ input[type="checkbox"] ~ label svg path {
 	overflow: hidden;
 	margin-bottom: 55px;
   height: 482px;
+    img {
+      height: auto;
+    }
 }
 .section-documents__content {
 	width: 50%;
