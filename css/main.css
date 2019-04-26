@@ -4138,4 +4138,10 @@ a.btn {
  border-right: 55px solid #fff;
  border-bottom: 241px solid transparent;
 }
+.section-documents-box {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 /*# sourceMappingURL=main.css.map */
